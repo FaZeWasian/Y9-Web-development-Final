@@ -1,0 +1,310 @@
+<html>
+<head>
+<style>
+ 
+/*styling for the navbar*/
+.topnav {
+    overflow: hidden;
+    background-color: turquoise;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    left: 14px;
+    padding: 14px 16px 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Arial", sans-serif;
+}
+
+.topnav a:hover {
+    background-color: navy;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: navy;
+    color: white;
+}
+
+/*styling for the picture with text overlay at the top of the page*/
+.container {
+    position: relative;
+    max-width: 1275px; 
+    margin: 16 auto; 
+    height: 300px;
+}
+
+.container .content_text {
+    position: absolute; 
+    top: 0; 
+    background: rgb(0, 0, 102);
+    color: white;
+    font-family: "Arial", sans-serif;
+    width: 1255px; 
+    padding-left: 20px;
+}
+
+/*styling for screen wide header: Helpful Websites*/
+header1 {
+    position:absolute;
+    top: 2060px;
+    left:0px;
+    }
+header1, .full-width {
+    width: 100%;
+    background: navy;
+    max-height: 80px;
+}
+.wrap1 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+    text-align: center;
+    color: white;
+    font-family: "Arial", sans-serif;
+    
+    }
+
+/*styling for screen wide header: Learn More*/  
+header {
+    position:absolute;
+    top: 850px;
+    left:0px;
+    }
+header, .full-width {
+    width: 100%;
+    background: navy;
+    max-height: 80px;
+}
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+    text-align: center;
+    color: white;
+    font-family: "Arial", sans-serif;
+    
+    }
+    
+/*styling of the Learn More content, accordion is titles and panel is the text*/
+.accordion {
+    position: relative;
+    background-color: turquoise;
+    top: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 97.9%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s;
+    font-family: "Arial", sans-serif;
+}
+
+
+
+.panel {
+    position: relative;
+    top: 30px;
+    padding: 0 18px;
+    display: block;
+    background-color: turquoise;
+    overflow: hidden;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+
+/*custom scrollbar options*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: navy;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: turquoise;
+}
+
+/*Styling the helpful links cards*/
+.card {
+    position: absolute;
+    top: 115px;
+    left: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,128,0.2);
+    width: 200px;
+    height: 350px;
+    background-color: turquoise;
+    font-family: "Arial", sans-serif;
+    color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,128,0.2);
+}
+
+
+.container {
+    height: 200px;
+    padding: 2px 16px;
+}
+
+.card1 {
+    position: absolute;
+    top: 115px;
+    left: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,128,0.2);
+    width: 200px;
+    height: 350px;
+    background-color: turquoise;
+    color: white;
+    font-family: "Arial", sans-serif;
+}
+
+.card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,128,0.2);
+}
+
+.card2 {
+    position: absolute;
+    top: 115px;
+    right: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,128,0.2);
+    width: 200px;
+    height: 350px;
+    background-color: turquoise;
+    color: white;
+    font-family: "Arial", sans-serif;
+}
+
+.card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,128,0.2);
+}
+
+.card3 {
+    position: absolute;
+    top: 115px;
+    right: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,128,0.2);
+    width: 200px;
+    height: 350px;
+    background-color: turquoise;
+    color: white;
+    font-family: "Arial", sans-serif;
+}
+
+.card3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,128,0.2);
+}
+    
+    </style>  
+</head>
+<body>
+
+<!--navbar HTML-->
+<div class="topnav">
+  <a href="designwebproj.html">Home</a>
+  <a class="active" href="page1.html">Learn More</a>
+  <a href="page2.html">Find a Car</a>
+</div>
+    
+<div class="container">
+  <img src="clipelectric.png" alt="Electric Car" style="width:100%;">
+  <div class="content_text">
+    <h1>Electric Vehicles</h1>
+    <p>The first electric car was created over 130 years ago, however, they have only recently become popular. Electric cars can help us achieve the UN Sustainable Development Goals 7 and 11.</p>
+  </div>
+</div>
+    
+<!--screen wide header-->
+<header>
+<!--header text-->
+  <div class="wrap">
+    <h2>Learn More!</h2>  
+</div>
+
+<!--Learn More content-->
+      <div class="accordion"><h2>History of Electric Vehicles</h2></div>
+<div class="panel">
+  <p>Electric vehicles and cars have existed for over 130 years. The creation of electric vehicles dates back to the early 19th century. In 1932, British inventor Robert Anderson created one of the first, but very crude, electric vehicles. It was not until the late 1800s that practical electric vehicles were being created. In 1890, an American chemist, William Morrison, created a six-person electric car that travelled at a top speed of 14mph. This creation sparked interest in electric vehicles and electric taxis even started to flourish in New York. At the beginning of the 20th century, electric vehicles were favoured over their gasoline and steam-powered counterparts. However, their popularity began to decline in the following years. One reason for this could be the introduction of the Ford Model-T,  whose gasoline option cost $650 while the electric option cost almost $2,000. Additionally, in the 1920s oil was found in Texas. This made gas, especially in rural communities, more available than electricity. This caused the popularity of gasoline cars to rise. The popularity of electric vehicles returns in the 21st century with the increase in recognition of the negative effects of climate change and carbon emissions. Electric vehicles are greener and more sustainable than gasoline cars making them part of the solution for climate change and global warming. In the 2010s more companies started to introduce electric and hybrid options to their fleets and some countries have said that they will no longer manufacture gasoline-powered vehicles as early as 2025.</p>
+</div>
+
+<div class="accordion"><h2>How Electric Vehicles Work</h2></div>
+<div class="panel">
+  <p>Electric vehicles work very similarly to a remote-controlled toy car. The car has a rechargeable battery that powers a motor. However, in full-scale electric vehicles, because of how much energy the motor needs to run, there are much larger batteries. These batteries are often laid out underneath the floor of the car to save space. While the electric car may seem very simple, the creation of efficient motors and batteries took a long time. Additionally, many companies have found new innovations to make their cars greener and more efficient. When a car brakes, it creates a lot of heat and energy caused by the friction of the brake stopping the wheel. In most cars that energy goes to waste, however, some electric cars are able to harvest this energy and use it to help power their motor.</p>
+</div>
+
+<div class="accordion"><h2>UN SDG Goals 7 and 11</h2></div>
+<div class="panel">
+  <p>SDG goal 7 calls for affordable, renewable and sustainable energy. Part of this goal is to create and use more sustainable energy. The other part of this goal is to make sure that this energy is available to everyone. Sustainable energy is energy that can be produced and used without harm to the environment. For example, electricity harvested by wind turbines and solar panels. One aspect of SDG goal 11 is to create sustainable cities and communities and to limit the carbon production and harmful emissions caused by those cities. This aspect is very similar to goal 7 which calls for the use of renewable and sustainable energy. If goal 7 is met and we use renewable and sustainable energy, then the sustainability of communities aspect of goal 11 will also be fulfilled. Goal 11 is different however because it also calls for better and safer housing, access to transportation for all as well as limiting the implications of natural disasters on communities. While these aims may seem at a glance distant from goal 7 some of them are interconnected. Goal 11 calls for access to sustainable and green transportation. This requires the use of renewable energy needed to reach goal 7. Goal 11 also calls for the reduced impact of natural disasters on communities. It is common knowledge that global warming can cause natural disasters, such as drought or storms. Therefore, renewable energy and fewer emissions can help reach this aspect of goal 11 as well. The main difference between goals 7 and 11 is that goal 11 calls for cities and communities to be better and safer generally, whereas goal 7 is focused more on the use and production of renewable energy. They are similar because in order to make our cities and communities better and safer we will need to employ the use of renewable and sustainable energy.</p>
+</div>
+    
+<div class="accordion"><h2>Electric Vehicles and UN SDG Goals 7 and 11</h2></div>
+<div class="panel">
+  <p>Electric vehicles are a large part of reaching goals 7 and 11. Goal 7 calls for the use of renewable and sustainable energy. This is something electric cars do well. Transportation in Canada is the second largest cause of carbon emissions and electric vehicles can help reduce this. With electric vehicles becoming more mainstream and economical, there are more people who are able to afford and use electric vehicles. This relates to the part of goal 7 which calls for sustainable and renewable energy to be available for everyone. In relation to goal 11, an important part of a community is access to transportation. Transportation is necessary for people to go to school and work. Electric cars fulfill the need for transportation in communities in a sustainable way. Additionally, the fewer carbon emissions caused by electric cars can also help limit the effect of natural disasters. The effectiveness of electric cars is limited because the production of electric cars is at the moment not green. For example, Tesla requires lithium to use in its car's batteries and to get lithium they need to mine it. Mining is not historically a process that is good for the environment.</p>
+</div>
+    
+<!--the second screen wide header-->
+</header>
+
+    <header1>
+<!--header text-->
+    <div class="wrap">
+    <h2>Helpful Websites!</h2>
+        </div>
+    
+<!--helpful link cards-->
+    <div class="card">
+  <img src="CB.jpeg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Carbon Brief</b></h4>
+    <a href="https://www.carbonbrief.org/factcheck-how-electric-vehicles-help-to-tackle-climate-change">How Electric Vehicles Help to Tackle Climate Change</a>
+  </div>
+        </div>
+
+    <div class="card1">
+  <img src="UN.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>United Nations</b></h4>
+    <a href="https://sdgs.un.org/goals">SDG Goals</a>
+  </div>
+        </div>
+    
+        <div class="card2">
+  <img src="EDF.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>EDF Energy</b></h4>
+    <a href="https://www.edfenergy.com/for-home/energywise/how-do-electric-cars-work#:~:text=Electric%20cars%20function%20by%20plugging,they%20feel%20lighter%20to%20drive.">How Do Electric Cars Work?</a>
+  </div>
+        </div>
+    
+    <div class="card3">
+  <img src="DOE.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>U.S Department of Energy</b></h4>
+    <a href="https://www.energy.gov/articles/history-electric-car">The History of the Electric Car</a>
+  </div>
+        </div>
+    
+    </header1>
+    
+    
+<script>
+    
+    </script>
+
+    </body>
+    
+

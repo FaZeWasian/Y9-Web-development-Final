@@ -1,0 +1,433 @@
+<html>
+<head>
+<style>   
+  
+/*styling of the navbar*/
+.topnav {
+    overflow: hidden;
+    background-color: turquoise;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    left: 14px;
+    padding: 14px 16px 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Arial", sans-serif;
+}
+
+.topnav a:hover {
+    background-color: navy;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: navy;
+    color: white;
+}
+   
+/*image with text overlay*/
+.container {
+    position: relative;
+    max-width: 1100px; 
+    margin: 16 auto; 
+    height: 300px;
+}
+
+.container .content_text {
+    position: absolute; 
+    top: 0; 
+    background: rgb(0, 0, 102);
+    color: white;
+    font-family: "Arial", sans-serif;
+    width: 1080px; 
+    padding-left: 20px;
+}
+
+/*site wide header*/
+header {
+    position:absolute;
+    top: 850px;
+    left:0px;
+    }
+header, .full-width {
+    width: 100%;
+    background: navy;
+    max-height: 80px;
+}
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+    text-align: center;
+    color: white;
+    font-family: "Arial", sans-serif;
+    
+    }
+
+/*input, output, image and button for the search by company tool*/
+.input {
+    position:absolute;
+    top: 100px;
+    left: 130px;
+    width: 200px;
+    height: 40px;
+    font-family: "Arial", sans-serif;
+    background-color: turquoise;
+    color: white;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+    font-size: 17px;
+    }
+
+.button {
+    position: absolute;
+    top: 150px;
+    left: 130px;
+    font-family: "Arial", sans-serif;
+    color: white;
+    background-color: navy;
+    border-style: solid;
+    border-width: medium;
+    border-color: turquoise;
+    padding: 5px;
+    font-size: 17px;
+    }
+
+.content {
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    background-color: turquoise;
+    color: white;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+    font-size: 17px;
+    font-family: "Arial", sans-serif;
+    padding: 5px;
+    height: 17px;
+    width: 150px;
+    }
+
+.img {
+    position:absolute;
+    top: 200px;
+    left: 120px;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+    }
+
+/*input, output, image and button for the price checker tool*/
+.input1 {
+    position:absolute;
+    top: 100px;
+    right: 130px;
+    width: 200px;
+    height: 40px;
+    font-family: "Arial", sans-serif;
+    background-color: turquoise;
+    color: white;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+    font-size: 17px;
+    }
+
+.button1 {
+    position: absolute;
+    top: 150px;
+    right: 130px;
+    font-family: "Arial", sans-serif;
+    color: white;
+    background-color: navy;
+    border-style: solid;
+    border-width: medium;
+    border-color: turquoise;
+    padding: 5px;
+    font-size: 17px;
+    }
+
+.content1 {
+    position: absolute;
+    top: 150px;
+    right: 400px;
+    background-color: turquoise;
+    color: white;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+    font-size: 17px;
+    font-family: "Arial", sans-serif;
+    padding: 5px;
+    height: 17px;
+    width: 150px;
+    }
+
+.img1 {
+    position:absolute;
+    top: 200px;
+    right: 120px;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+    }
+
+/*labels underneath the search tools*/
+.label {
+    position:absolute;
+    top: 520px;
+    left:120px;
+    width: 416px;
+    background-color: navy;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    }
+
+.label1 {
+    position:absolute;
+    top: 520px;
+    right:120px;
+    width: 416px;
+    background-color: navy;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    }
+    
+</style> 
+</head>
+<body>
+
+<script>
+
+/*array that holds information about electric car models based on company*/
+let make = [
+       
+    {
+        "company": "Toyota",
+        "models": "Toyota Prius Prime",
+        "img": "prius.jpg"
+    },
+    {
+        "company": "Ford",
+        "models": "Mustang Mach-E",
+        "img": "mustang.jpg" 
+    },
+    {
+        "company": "Chevrolet",
+        "models": "Chevrolet Bolt EV",
+        "img": "bolt.jpg"
+    },
+    {
+        "company": "Audi",
+        "models": "Audi e-tron",
+        "img": "e-tron.jpg"
+    },
+    {
+        "company": "BMW",
+        "models": "BMW i3",
+        "img": "i3.jpg"
+    },
+    {
+        "company": "Nissan",
+        "models": "Nissan Leaf",
+        "img": "leaf.jpg"
+    },
+    {
+        "company": "Tesla",
+        "models": "Tesla Model Y",
+        "img": "modely.jpg"
+    },
+    {
+        "company": "Hyundai",
+        "models": "Hyundai KONA Electric",
+        "img": "KONA.jpg"
+    },
+    {
+        "company": "KIA",
+        "models": "KIA Niro EV",
+        "img": "Niro.jpg"
+    },
+    {
+       "company": "Porsche",
+        "models": "Porsche Taycan",
+        "img": "porsche.jpg"
+    },
+    {
+       "company": "Renault",
+        "models": "Renault Zoe",
+        "img": "renault.jpg"
+    }
+]
+
+console.log(make)
+
+/*array that holds information about price based on car model*/
+let price = [
+{
+        "carmake": "Toyota Prius Prime",
+        "price": "CAN $33,550",
+        "img": "prius.jpg"
+    },
+{
+        "carmake": "Mustang Mach-E",
+        "price": "CAN $50,495",
+        "img": "mustang.jpg"
+    },
+{
+        "carmake": "Chevrolet Bolt EV",
+        "price": "CAN $38,198",
+        "img": "bolt.jpg"
+    },
+{
+        "carmake": "Audi e-tron",
+        "price": "CAN $85,600",
+        "img": "e-tron.jpg"
+    },
+{
+        "carmake": "BMW i3",
+        "price": "CAN $44,950",
+        "img": "i3.jpg"
+    },
+{
+        "carmake": "Nissan Leaf",
+        "price": "CAN $44,298",
+        "img": "leaf.jpg"
+    },
+{
+        "carmake": "Tesla Model Y",
+        "price": "CAN $54,900",
+        "img": "modely.jpg"
+    },
+{
+        "carmake": "Hyundai KONA",
+        "price": "CAN $44,999",
+        "img": "KONA.jpg"
+    },
+{
+        "carmake": "KIA Niro EV",
+        "price": "CAN $44,995",
+        "img": "Niro.jpg"
+    },
+    {
+        "carmake": "Porsche Taycan",
+        "price": "CAN $119,900",
+        "img": "porsche.jpg"
+    },
+    {
+        "carmake": "Renault Zoe",
+        "price": "CAN $47,380",
+        "img": "renault.jpg"
+    }
+]
+
+console.log(price)
+
+/*search function for the search by company tool*/
+function search(){
+/*test to see if the funtion is running*/
+        console.log("i am here");
+/*defining my html elements in javascript*/
+        var textobj = document.getElementById("myinput");
+        var mydiv = document.getElementById("content");
+        var myimg = document.getElementById("img")
+/*for loop which searches the array*/
+        for (i = 0; i < make.length; i++){
+/*if the value 'company' matches what the user input, change the image's source and display the corresponding model*/
+            if (make[i]['company'] == textobj.value){
+                mydiv.innerHTML = make[i]['models'];
+                myimg.src = make[i]['img']
+/*clear the output*/
+        textobj.value = "";
+                break;  
+            } 
+/*if the value 'company' does not match the user input display the blank image and an error message*/
+            else {
+                mydiv.innerHTML = "No Electric Option"
+                myimg.src="blank1.png"
+            }   
+        }       
+    }
+    
+/*search function for the price checker tool*/
+function search1(){
+/*test to see if the funtion is running*/
+        console.log("i am here");
+/*defining our html elements in javascript*/
+        var textobj = document.getElementById("myinput1");
+        var mydiv = document.getElementById("content1");
+        var myimg = document.getElementById("img1")
+/*for loop which searches the array*/
+        for (i = 0; i < price.length; i++){
+/*if the value 'carmake' matches what the user input, change the image's source and display the corresponding price*/
+            if (price[i]['carmake'] == textobj.value){
+                mydiv.innerHTML = price[i]['price'];
+                myimg.src = price[i]['img']
+/*clear the output*/ 
+        textobj.value = "";
+                break;  
+            } 
+/*if the value 'carmake' does not match the user input display the blank image and an error message*/
+            else {
+                mydiv.innerHTML = "No Price Available"
+                myimg.src="blank1.png"
+            }   
+        }       
+    }
+
+    
+    </script>
+
+<!--navbar-->
+<div class="topnav">
+  <a href="designwebproj.html">Home</a>
+  <a href="page1.html">Learn More</a>
+  <a class="active" href="page2.html">Find a Car</a>
+  
+</div>
+
+<!--image and text overlay at the top of the page-->
+<div class="container">
+  <img src="electricfleet.jpg" alt="Find a Car!" style="width:100%;">
+  <div class="content_text">
+    <h1>Find a Car!</h1>
+    <p>Use the "Search by Company" tool to explore the different electric options available! You may then use the "Price Checker" tool to search for the price of specific models!</p>
+  </div>
+</div>
+    
+
+<!--search tools site wide header-->
+<header>
+  <div class="wrap">
+    <h2>Search Tools</h2>  
+</div>
+    
+<!--price checker tool input, image, text and output-->
+<input class="input1" type="text" id="myinput1" value="Input Model"><br>
+<button type="button1" class="button1" onclick="search1()">Submit</button>
+<div class="content1" id="content1"></div>
+<img class="img1" id="img1" src="blank1.png">
+<div class="label"><h2>Search by Company</h2></div>
+    
+<!--search by company input, image, text and output-->    
+<input class="input" type="text" id="myinput" value="Input Company Name"><br>
+<button type="button" class="button" onclick="search()">Submit</button>
+<div class="content" id="content"></div>
+<img class="img" id="img" src="blank1.png">
+<div class="label1"><h2>Price Checker</h2></div>
+    
+    
+</header>
+    
+
+    </body>
+</html>
